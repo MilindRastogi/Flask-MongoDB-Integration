@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="static/index.css?v=1.0.199">
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Location</th>
+        </tr>
+        {% for customers in customer %}
+        <tr>
+        <td>{{ customers['name']}}</td>
+        <td>{{ customers['phone'] }}</td>
+        <td>{{ customers['location'] }}</td>
+        </tr>
+        {% endfor %}       
+    </table>   
+</body>
+</head>
+</html>
