@@ -7,10 +7,9 @@ mongo = PyMongo(app)
 customer_collection = mongo.db.customers
 
 
-@app.route("/milind")
-def home_page():
+@app.route("/read")
+def read_data():
     customer = (customer_collection.find())
-    print(customer)
     return render_template('index.html', customer=customer)
 
 
